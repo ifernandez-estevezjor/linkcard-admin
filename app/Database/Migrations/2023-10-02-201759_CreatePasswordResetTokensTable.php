@@ -17,10 +17,7 @@ class CreatePasswordResetTokensTable extends Migration
                 'type'=>'VARCHAR',
                 'constraint'=>'255'
             ],
-            'created_at'=>[
-                'type'=>'DATETIME',
-                'null'=>true
-            ]
+            'created_at timestamp default current_timestamp'
         ]);
         $this->forge->createTable('password_reset_tokens');
     }

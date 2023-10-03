@@ -158,4 +158,99 @@ class AuthController extends BaseController
         }
     }
 
+    public function resetPassword($token){
+        $passwordResetPassword = new PasswordResetToken();
+        $check_token = $passwordResetPassword->asObject()->where('token', $token)->first();
+
+        if(!$check_token){
+            return redirect()->route('admin.forgot.form')->with('fail','Token inválido. Realiza otra solicitud para recueperar tu contraseña');
+        }else {
+            //Verifica si el token no ha expirado
+            $diffMins = Carbon::createFromFormat('Y-m-d H:i:s', $check_token->created_at)->diffInMinutes(Carbon::now());
+
+            if($diffMins > 15){
+                //Si el token expiró
+                return redirect()->route('admin.forgot.form')->with('fail','Token expirado. Realiza otra solicitud para recueperar tu contraseña');
+            }else {
+                return view('backend/pages/auth/reset',[
+                    'pagetitle' => 'Resetear Contrasena',
+                    'validation'=>null,
+                    'token'=>$token
+                ]);
+            }
+        }
+    }
+
+    public function resetPasswordHandler($token){
+        $isValid = $this->validate([
+            'new_password'=>[
+                'rules'=>'required|max_length[20]|min_length[5]|is_password_strong[new_password]',
+                'errors'=>[
+                    'required'=>'Escribe la nueva contrasena',
+                    'min_lenght'=>'La nueva contrasena debe tener por lo msenos 5 caracteres',
+                    'max_lenght'=>'La nueva contrasena debe tener mámínimo 20 caracters',
+                    'is_password_strong'=>'La nueva contrasena debe tener 1 letra mayúscula, 1 letra minúscula, 1 número y 1 caracter especial'
+                ]
+            ],
+            'confirm_new_password'=>[
+                'rules'=>'required|matches[new_password]',
+                'errors'=>[
+                    'required'=>'Confirmar nueva contrasena',
+                    'matches'=>'La contrasena no es la misma.'
+                ]
+            ]
+        ]);
+
+        if (!$isValid) {
+            return view('backend/pages/auth/reset',[
+                'pageTitle'=>"Reseteart contrasena",
+                'validation'=>null,
+                'token'=>$token
+            ]);
+        }else {
+            // Obtener detalles del token
+            $passwordResetPassword = new PasswordResetToken();
+            $get_token = $passwordResetPassword->asObject()->where('token', $token)->first();
+
+            // Obtener detalles del usuario (admin)
+            $user = new User();
+            $user_info = $user->asObject()->where('email', $get_token->email)->first();
+
+            if(!$get_token){
+                return redirect()->back()->with('fail','Token inválido')->withInput();
+            }else{
+                //Actualizar la contraseña del admin
+                $user->where('email', $user_info->email)->set(['password'=>Hash::make($this->request->getVar('new_password'))])->update();
+
+                //Enviar notificación al correo del usuario (admin)
+                $mail_data = array(
+                    'user'=>$user_info,
+                    'new_password'=>$this->request->getVar('new_password')
+                );
+
+                $view = \Config\Services::renderer();
+                $mail_body = $view->setVar('mail_data', $mail_data)->render('email-templates/password-changed-email-template');
+
+                $mailConfig = array(
+                    'mail_from_email'=>env('EMAIL_FROM_ADDRESS'),
+                    'mail_from_name'=>env('EMAIL_FROM_NAME'),
+                    'mail_recipient_email'=>$user_info->email,
+                    'mail_recipient_name'=>$user_info->name,
+                    'mail_subject'=>'Cambiar Contrasena',
+                    'mail_body'=>$mail_body
+                );
+
+                if(sendEmail($mailConfig)){
+                    //Eliminar token
+                    $passwordResetPassword->where('email', $user_info->email)->delete();
+
+                    //Redirigir y mostrar el mensaje en el login
+                    return redirect()->route('admin.login.form')->with('success', '¡Confirmado! Tu contrasena se ha cambiado, puedes iniciar sesión');
+                }else {
+                    return redirect()->back()->with('fail','Algo salió mal')->withInput();
+                }
+            }
+        }
+    }
+
 }

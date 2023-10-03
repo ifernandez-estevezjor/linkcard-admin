@@ -12,3 +12,4 @@
 
 # Modificaciones 03/10/2023
 - Se solucionó el error de conexión a servidor SMTP.
+- Creación de la página para resetear la contraseña del admin. (Hay error en el método make, queda pendiente).

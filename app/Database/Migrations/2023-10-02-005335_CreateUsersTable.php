@@ -40,11 +40,8 @@ class CreateUsersTable extends Migration
                 'type'=>'TEXT',
                 'null'=>true
             ],
-            'created_at'=>[
-                'type'=>'DATETIME',
-                'null'=>true
-            ],
-            'updated_at'=>[
+            'created_at datetime default current_timestamp',
+            'updated_at current'=>[
                 'type'=>'DATETIME',
                 'null'=>true
             ]
