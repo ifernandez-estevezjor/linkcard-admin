@@ -130,7 +130,8 @@ class AuthController extends BaseController
                 ]);
             }
             // Crear enlace de accion
-            $actionLink = route_to('admin.reset-password', $token);
+            //$actionLink = route_to('admin.reset-password', $token);
+            $actionLink = base_url(route_to('admin.reset-password', $token));
 
             $mail_data = array(
                 'actionLink'=>$actionLink,
@@ -144,7 +145,7 @@ class AuthController extends BaseController
                 'mail_from_name'=>env('EMAIL_FROM_NAME'),
                 'mail_recipient_email'=>$user_info->email,
                 'mail_recipient_name'=>$user_info->name,
-                'mail_subject'=>'Resetear contraseña',
+                'mail_subject'=>'Resetear contrasena',
                 'mail_body'=>$mail_body
             );
 

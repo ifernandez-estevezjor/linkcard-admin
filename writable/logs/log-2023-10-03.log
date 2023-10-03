@@ -1,0 +1,234 @@
+INFO - 2023-10-03 09:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 09:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 09:10:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 09:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 09:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-03 09:11:30 --> SMTP Error: Could not connect to SMTP host. Failed to connect to server
+in FCPATH\PHPMailer\src\PHPMailer.php on line 2233.
+ 1 FCPATH\PHPMailer\src\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect([])
+ 2 FCPATH\PHPMailer\src\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Tue, 3 Oct 2023 09:11:25 -0500
+To: Admin <admin@email.com>
+From: linkcard-admin <info@linkcard-admin.com.mx>
+Subject: =?iso-8859-1?Q?Resetear_contrase=C3=B1a?=
+Message-ID: <Gg2nuZ8IXq0Vtb4Nm8u8J3gchvG3nAWImCBQAQfKI@linkcard-admin.com.mx>
+X-Mailer: PHPMailer 6.8.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+', '<!-- DEBUG-VIEW START 1 APPPATH\\Views\\email-templates\\forgot-email-template.php -->
+<p>Estimado Admin</p>
+<p>
+    Hemos recibido una solicitud para resetear tu contraseña de nuestro sitio www.linkcard.com.mx
+    con la cuenta asociada <i>admin@email.com</i>
+    Puedes resetear tu contraseña haciendo click en el siguiente botón:
+    <br><br>
+    <a href="/admin/password/reset/febedf4f764defae7d7ad33e69309045472e2c9ebc1a076e96591807beee463f05cc6f8518672579efa6bb4ae4502c35e337e2133605b459e7bde79afda6b36db1" style="color:#fff;border-color:#22bc66;border-style:solid;
+    box-shadow:0 2px 3px rgba(0,0,0,0.16);-webkit-text-size-adjust:none;box-sizing:border-box;"
+    target="_blank">Reset Password</a>
+    <br><br>
+    <b>Notice:</b> Este enlace será válido durante 15 minutos.
+    <br><br>
+    Si no solicitaste resetear tu contraseña, por favor, haz caso omiso a este correo.
+</p>
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\email-templates\\forgot-email-template.php -->
+')
+ 3 FCPATH\PHPMailer\src\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend()
+ 4 APPPATH\Helpers\CIMail_helper.php(28): PHPMailer\PHPMailer\PHPMailer->send()
+ 5 APPPATH\Controllers\AuthController.php(152): sendEmail([...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->sendPasswordResetLink()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-03 09:12:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 09:13:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-03 09:13:51 --> SMTP Error: Could not connect to SMTP host. Failed to connect to server
+in FCPATH\PHPMailer\src\PHPMailer.php on line 2233.
+ 1 FCPATH\PHPMailer\src\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect([])
+ 2 FCPATH\PHPMailer\src\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Tue, 3 Oct 2023 09:13:47 -0500
+To: Admin <admin@email.com>
+From: linkcard-admin <info@linkcard-admin.com.mx>
+Subject: =?iso-8859-1?Q?Resetear_contrase=C3=B1a?=
+Message-ID: <3FGPnTGid9B2KeESz3ZDUq5qcVUt4QgwY2DwdSsWU@linkcard-admin.com.mx>
+X-Mailer: PHPMailer 6.8.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+', '<!-- DEBUG-VIEW START 1 APPPATH\\Views\\email-templates\\forgot-email-template.php -->
+<p>Estimado Admin</p>
+<p>
+    Hemos recibido una solicitud para resetear tu contraseña de nuestro sitio www.linkcard.com.mx
+    con la cuenta asociada <i>admin@email.com</i>
+    Puedes resetear tu contraseña haciendo click en el siguiente botón:
+    <br><br>
+    <a href="/admin/password/reset/1cbd3344872d9546a4f441d50d0d369116efc8ae65c74d422a86a1751a9f6ce8298a8eddff93d0e5b87473dafafabe360ecf0acf4944150b1a35d03e1eefbcce98" style="color:#fff;border-color:#22bc66;border-style:solid;
+    box-shadow:0 2px 3px rgba(0,0,0,0.16);-webkit-text-size-adjust:none;box-sizing:border-box;"
+    target="_blank">Reset Password</a>
+    <br><br>
+    <b>Notice:</b> Este enlace será válido durante 15 minutos.
+    <br><br>
+    Si no solicitaste resetear tu contraseña, por favor, haz caso omiso a este correo.
+</p>
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\email-templates\\forgot-email-template.php -->
+')
+ 3 FCPATH\PHPMailer\src\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend()
+ 4 APPPATH\Helpers\CIMail_helper.php(28): PHPMailer\PHPMailer\PHPMailer->send()
+ 5 APPPATH\Controllers\AuthController.php(152): sendEmail([...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->sendPasswordResetLink()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-03 09:34:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 09:34:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 09:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-03 09:34:31 --> SMTP Error: Could not connect to SMTP host. Failed to connect to server
+in FCPATH\PHPMailer\src\PHPMailer.php on line 2233.
+ 1 FCPATH\PHPMailer\src\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect([...])
+ 2 FCPATH\PHPMailer\src\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Tue, 3 Oct 2023 09:34:27 -0500
+To: Admin <admin@email.com>
+From: linkcard-admin <info@linkcard-admin.com.mx>
+Subject: =?iso-8859-1?Q?Resetear_contrase=C3=B1a?=
+Message-ID: <DbSHHbHOqXXaTSXWC9fRpXNFEsobaeWCKhM55fC9B2g@linkcard-admin.com.mx>
+X-Mailer: PHPMailer 6.8.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+', '<!-- DEBUG-VIEW START 1 APPPATH\\Views\\email-templates\\forgot-email-template.php -->
+<p>Estimado Admin</p>
+<p>
+    Hemos recibido una solicitud para resetear tu contraseña de nuestro sitio www.linkcard.com.mx
+    con la cuenta asociada <i>admin@email.com</i>
+    Puedes resetear tu contraseña haciendo click en el siguiente botón:
+    <br><br>
+    <a href="/admin/password/reset/ac3189d37df99374e83cf8641fb04cadfeeed88cf50653cf9a599fbde595f6852ac36510f5312f4a645adadbecdaa1e69f0b91230e1f37f8b642c1ccef130e87ab" style="color:#fff;border-color:#22bc66;border-style:solid;
+    box-shadow:0 2px 3px rgba(0,0,0,0.16);-webkit-text-size-adjust:none;box-sizing:border-box;"
+    target="_blank">Reset Password</a>
+    <br><br>
+    <b>Notice:</b> Este enlace será válido durante 15 minutos.
+    <br><br>
+    Si no solicitaste resetear tu contraseña, por favor, haz caso omiso a este correo.
+</p>
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\email-templates\\forgot-email-template.php -->
+')
+ 3 FCPATH\PHPMailer\src\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend()
+ 4 APPPATH\Helpers\CIMail_helper.php(35): PHPMailer\PHPMailer\PHPMailer->send()
+ 5 APPPATH\Controllers\AuthController.php(152): sendEmail([...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->sendPasswordResetLink()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-03 09:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 09:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 09:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 09:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:08:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-03 11:08:11 --> SMTP Error: Could not authenticate.
+in FCPATH\PHPMailer\src\PHPMailer.php on line 2212.
+ 1 FCPATH\PHPMailer\src\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect([...])
+ 2 FCPATH\PHPMailer\src\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Tue, 3 Oct 2023 11:08:10 -0500
+To: Admin <admin@email.com>
+From: linkcard-admin <info@linkcard-admin.com.mx>
+Subject: =?iso-8859-1?Q?Resetear_contrase=C3=B1a?=
+Message-ID: <QfqOpNR4YBZ74a7UScOjdNeIkMCl8dDp7YJtoxXGU@linkcard-admin.com.mx>
+X-Mailer: PHPMailer 6.8.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+', '<!-- DEBUG-VIEW START 1 APPPATH\\Views\\email-templates\\forgot-email-template.php -->
+<p>Estimado Admin</p>
+<p>
+    Hemos recibido una solicitud para resetear tu contraseña de nuestro sitio www.linkcard.com.mx
+    con la cuenta asociada <i>admin@email.com</i>
+    Puedes resetear tu contraseña haciendo click en el siguiente botón:
+    <br><br>
+    <a href="/admin/password/reset/85f3575445ee793eb06fb4186d5f72bffa236cbb28016e2c9ccfa420fe3a4baf468cdf6f5939e60157ecfa34128d9cb62e63642acf0479568309f476655654f50c" style="color:#fff;border-color:#22bc66;border-style:solid;
+    box-shadow:0 2px 3px rgba(0,0,0,0.16);-webkit-text-size-adjust:none;box-sizing:border-box;"
+    target="_blank">Reset Password</a>
+    <br><br>
+    <b>Notice:</b> Este enlace será válido durante 15 minutos.
+    <br><br>
+    Si no solicitaste resetear tu contraseña, por favor, haz caso omiso a este correo.
+</p>
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\email-templates\\forgot-email-template.php -->
+')
+ 3 FCPATH\PHPMailer\src\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend()
+ 4 APPPATH\Helpers\CIMail_helper.php(35): PHPMailer\PHPMailer\PHPMailer->send()
+ 5 APPPATH\Controllers\AuthController.php(152): sendEmail([...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->sendPasswordResetLink()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-03 11:11:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:11:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:11:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:14:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-10-03 11:14:07 --> SMTP Error: Could not connect to SMTP host.
+in FCPATH\PHPMailer\src\PHPMailer.php on line 2233.
+ 1 FCPATH\PHPMailer\src\PHPMailer.php(2019): PHPMailer\PHPMailer\PHPMailer->smtpConnect([...])
+ 2 FCPATH\PHPMailer\src\PHPMailer.php(1678): PHPMailer\PHPMailer\PHPMailer->smtpSend('Date: Tue, 3 Oct 2023 11:11:22 -0500
+To: Admin <admin@email.com>
+From: linkcard-admin <info@linkcard-admin.com.mx>
+Subject: =?iso-8859-1?Q?Resetear_contrase=C3=B1a?=
+Message-ID: <AGnJXfTWvJoUrV1QsSmIymehPMoH4VXqgU5C5enkG8@linkcard-admin.com.mx>
+X-Mailer: PHPMailer 6.8.1 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=iso-8859-1
+Content-Transfer-Encoding: 8bit
+
+', '<!-- DEBUG-VIEW START 1 APPPATH\\Views\\email-templates\\forgot-email-template.php -->
+<p>Estimado Admin</p>
+<p>
+    Hemos recibido una solicitud para resetear tu contraseña de nuestro sitio www.linkcard.com.mx
+    con la cuenta asociada <i>admin@email.com</i>
+    Puedes resetear tu contraseña haciendo click en el siguiente botón:
+    <br><br>
+    <a href="/admin/password/reset/452b01a8e6610e5d4670ed6fedcd62aeeb0acb85c14f09e7647e95c933bc077287f4a58b0daed7b571becef02811e94e2c27bb59b93e21bf4c01f979f2572159b7" style="color:#fff;border-color:#22bc66;border-style:solid;
+    box-shadow:0 2px 3px rgba(0,0,0,0.16);-webkit-text-size-adjust:none;box-sizing:border-box;"
+    target="_blank">Reset Password</a>
+    <br><br>
+    <b>Notice:</b> Este enlace será válido durante 15 minutos.
+    <br><br>
+    Si no solicitaste resetear tu contraseña, por favor, haz caso omiso a este correo.
+</p>
+<!-- DEBUG-VIEW ENDED 1 APPPATH\\Views\\email-templates\\forgot-email-template.php -->
+')
+ 3 FCPATH\PHPMailer\src\PHPMailer.php(1516): PHPMailer\PHPMailer\PHPMailer->postSend()
+ 4 APPPATH\Helpers\CIMail_helper.php(35): PHPMailer\PHPMailer\PHPMailer->send()
+ 5 APPPATH\Controllers\AuthController.php(152): sendEmail([...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AuthController->sendPasswordResetLink()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-10-03 11:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:14:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:22:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:22:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:25:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:25:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:32:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:34:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:34:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:35:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:35:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:37:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:37:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:40:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:40:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:41:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-10-03 11:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

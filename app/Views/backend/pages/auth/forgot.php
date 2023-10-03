@@ -6,7 +6,7 @@
         <h2 class="text-center text-primary">Forgot Password</h2>
     </div>
     <h6 class="mb-20">
-        Enter your email address to reset your password
+        Por favor, escribe tu correo para resetear tu contraseña.
     </h6>
     <?php $validation = \Config\Services::validation(); ?>
     <form action="<?= route_to('send_password_reset_link') ?>" method="post">

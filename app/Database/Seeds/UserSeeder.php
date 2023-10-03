@@ -8,11 +8,17 @@ class UserSeeder extends Seeder
 {
     public function run()
     {
-        $data = array(
+        /*$data = array(
             'name'=>'Admin',
             'email'=>'admin@email.com',
             'username'=>'admin',
             'password'=>password_hash ('12345', PASSWORD_BCRYPT)
+        );*/
+        $data = array(
+            'name'=>'Irvin',
+            'email'=>'ifernandez.estevezjor@gmail.com',
+            'username'=>'ifernandez',
+            'password'=>password_hash ('abcde', PASSWORD_BCRYPT)
         );
         $this->db->table('users')->insert($data);
     }
