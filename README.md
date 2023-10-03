@@ -9,3 +9,6 @@
 - Interfaz recuperar contraseña.
 - Funcionalidad formulario recuperar contraseña.
 - ERROR: Revisar conexión puerto SMTP para enviar recuperar contraseña.
+
+# Modificaciones 03/10/2023
+- Se solucionó el error de conexión a servidor SMTP.
