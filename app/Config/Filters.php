@@ -21,7 +21,7 @@ class Filters extends BaseConfig
         'honeypot'      => Honeypot::class,
         'invalidchars'  => InvalidChars::class,
         'secureheaders' => SecureHeaders::class,
-        'cifilter'      => CIFilter::class
+        'cifilter'      => \App\Filters\CIFilter::class
     ];
 
     /**

@@ -28,8 +28,9 @@
     <div class="login-header box-shadow">
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <div class="brand-logo">
-                <a href="login.html">
-                    <img src="/backend/vendors/images/deskapp-logo.svg" alt="" />
+                <a href="login.html" class="text-dark">
+                    <!--<img src="/backend/vendors/images/deskapp-logo.svg" alt="" />-->
+                    LINKCARD
                 </a>
             </div>
             <div class="login-menu">
