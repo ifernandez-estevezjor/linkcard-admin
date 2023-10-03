@@ -4,3 +4,8 @@
 - Interfaz login.
 - Interfaz administrador.
 - Funcionalidad formulario inicio de sesión.
+
+# Modificaciones 02/10/2023
+- Interfaz recuperar contraseña.
+- Funcionalidad formulario recuperar contraseña.
+- ERROR: Revisar conexión puerto SMTP para enviar recuperar contraseña.
