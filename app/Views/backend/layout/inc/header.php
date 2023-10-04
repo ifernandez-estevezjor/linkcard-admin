@@ -125,15 +125,14 @@
             <div class="dropdown">
                 <a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
                     <span class="user-icon">
-                        <img src="/backend/vendors/images/photo1.jpg" alt="" />
+                        <!--<img src="/backend/vendors/images/photo1.jpg" class="ci-avatar-photo" alt=""/>-->
                     </span>
-                    <span class="user-name">Ross C. Lopez</span>
+                    <span class="user-name ci-user-name">Ross C. Lopez</span><!-- incluir get_user() y verificar error -->
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-                    <a class="dropdown-item" href="profile.html"><i class="dw dw-user1"></i> Profile</a>
-                    <a class="dropdown-item" href="profile.html"><i class="dw dw-settings2"></i> Setting</a>
-                    <a class="dropdown-item" href="faq.html"><i class="dw dw-help"></i> Help</a>
-                    <a class="dropdown-item" href="<?= route_to('admin.logout') ?>"><i class="dw dw-logout"></i> Log Out</a>
+                    <a class="dropdown-item" href="<?= route_to('admin.profile') ?>"><i class="dw dw-user1"></i> Perfil</a>
+                    <a class="dropdown-item" href="><?= route_to('settings') ?>"><i class="dw dw-settings2"></i> Ajustes</a>
+                    <a class="dropdown-item" href="<?= route_to('admin.logout') ?>"><i class="dw dw-logout"></i> Cerrar Sesión</a>
                 </div>
             </div>
         </div>

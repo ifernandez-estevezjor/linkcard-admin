@@ -11,7 +11,7 @@ use Carbon\Carbon;
 
 class AuthController extends BaseController
 {
-    protected $helpers = ['url', 'form','CIMail'];
+    protected $helpers = ['url', 'form','CIMail','CIFunctions'];
     
     public function loginForm()
     {
@@ -220,7 +220,7 @@ class AuthController extends BaseController
                 return redirect()->back()->with('fail','Token inválido')->withInput();
             }else{
                 //Actualizar la contraseña del admin
-                $user->where('email', $user_info->email)->set(['password'=>Hash::make($this->request->getVar('new_password'))])->update();
+                //$user->where('email', $user_info->email)->set(['password'=>Hash::make($this->request->getVar('new_password'))])->update();
 
                 //Enviar notificación al correo del usuario (admin)
                 $mail_data = array(

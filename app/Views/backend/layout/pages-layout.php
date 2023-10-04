@@ -20,10 +20,8 @@
     <link rel="stylesheet" type="text/css" href="/backend/vendors/styles/core.css" />
     <link rel="stylesheet" type="text/css" href="/backend/vendors/styles/icon-font.min.css" />
     <link rel="stylesheet" type="text/css" href="/backend/vendors/styles/style.css" />
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2973766580778258" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/extra-assets/ijabo/ijabo.min.css">
+    <link rel="stylesheet" type="text/css" href="/extra-assets/ijaboCropTool/ijaboCropTool.min.css">
 
     <?= $this->renderSection('stylesheets') ?>
 </head>
@@ -54,6 +52,9 @@
     <script src="/backend/vendors/scripts/script.min.js"></script>
     <script src="/backend/vendors/scripts/process.js"></script>
     <script src="/backend/vendors/scripts/layout-settings.js"></script>
+    <script src="/extra-assets/ijabo/ijabo.min.js"></script>
+    <script src="/extra-assets/ijabo/jquery.ijaboViewer.min.js"></script>
+    <script src="/extra-assets/ijaboCropTool/ijaboCropTool.min.js"></script>
     <?= $this->renderSection('scripts') ?>
 </body>
 
