@@ -17,3 +17,5 @@
 # Modificaciones 04/10/2023
 - Creación de los apartados perfil datos generales, cambiar contraseña, actualizar contraseña.
 - Revisar los errores que se marcan en el método make y en get_user. URGENTE
+- Creación de la sección Ajustes.
+- Creación de la sección Ajustes Generales para modificar la página (verificar por qué sale el error en get_settings().)

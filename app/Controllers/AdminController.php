@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Libraries\CIAuth;
 use App\Models\User;
 use App\Libraries\Hash;
+use App\Models\Setting;
 
 class AdminController extends BaseController
 {
@@ -178,6 +179,45 @@ class AdminController extends BaseController
             'Pagetitle' => 'Settings'
         ];
         return view('backend/pages/settings',$data);
+    }
+
+    public function updateGeneralSettings(){
+        $request = \Config\Services::request();
+
+        if ($request->isAJAX()) {
+            $validation = \Config\Services::validation();
+
+            $this->validate([
+                'blog_title'=>[
+                    'rules'=>'required',
+                    'errors'=>[
+                        'required'=>'Escribe un título para el blog.'
+                    ]
+                ],
+                'blog_email'=>[
+                    'rules'=>'required|valid_email',
+                    'errors'=>[
+                        'required'=>'Escribe un correo para el blog.',
+                        'valid_email'=>'El correo no es válido.'
+                    ]
+                ]
+            ]);
+
+            if ($validation->run() === FALSE) {
+                $errors = $validation->getErrors();
+                return $this->response->setJSON(['status'=>0,'token'=>csrf_hash(),'error'=>$errors]);
+            }else{
+                $settings = new Setting();
+                $setting_id = $settings->asObject()->first()->id;
+                $update = $settings->where('id',$setting_id)->set(['blog_title'=>$request->getVar('blog_title'),'blog_email'=>$request->getVar('blog_email'),'blog_phone'=>$request->getVar('blog_phone'),'blog_meta_keywords'=>$request->getVar('blog_meta_keywords'),'blog_meta_description'=>$request->getVar('blog_meta_description')])->update();
+
+                if ($update) {
+                    return $this->response->setJSON(['status'=>1,'token'=>csrf_hash(),'msg'=>'¡Hecho! La información del blog ha sido actualizada correctamente.']);
+                }else{
+                    return $this->response->setJSON(['status'=>0,'token'=>csrf_hash(),'msg'=>'Hubo un error, intenta de nuevo.']);
+                }
+            }
+        }
     }
 
 }
